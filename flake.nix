@@ -6,6 +6,7 @@
     nixosConfigurations.pix = nixpkgs.lib.nixosSystem {
       modules = [
         nixos-hardware.nixosModules.raspberry-pi-4
+        ./configuration.nix
       ];
     };
   };
