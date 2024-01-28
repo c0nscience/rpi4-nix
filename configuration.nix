@@ -9,7 +9,12 @@ in {
     ./hardware-configuration.nix
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    ''
+  };
 
   boot = {
     kernelPackages = pkgs.linuxKernel.packages.linux_rpi4;
