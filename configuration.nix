@@ -13,7 +13,7 @@ in {
     package = pkgs.nixFlakes;
     extraOptions = ''
       experimental-features = nix-command flakes
-    ''
+    '';
   };
 
   boot = {
