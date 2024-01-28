@@ -52,7 +52,7 @@ in {
       extraGroups = [ "wheel" "networkmanager" ];
       openssh = {
         authorizedKeys.keyFiles = [
-          /etc/nixos/ssh/authorized_keys
+          ./ssh/authorized_keys
         ];
       };
     };
